@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#echo "What's your name? "
+#read Name
+#echo "Hey $Name"
+
+#parameters are written like this $1 $2 $3 ....$9
+#parameters starting from 10 are written like this $[10] $[11] $[12]
+
+#echo " $(($1 $2 $3))"
+

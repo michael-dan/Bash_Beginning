@@ -6,4 +6,5 @@ then
 echo "Found"
 else
 echo "No dan in home folders"
+exit
 fi
