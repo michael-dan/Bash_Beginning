@@ -1,0 +1,9 @@
+#!/bin/bash
+# Look for folder "dan" in home folders
+
+if [ -e /home/dan ];
+then
+echo "Found"
+else
+echo "No dan in home folders"
+fi

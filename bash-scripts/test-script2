@@ -1,0 +1,11 @@
+#!/bin/bash
+#There will be bash script learning
+
+echo "Are u hungry?"
+read VALUE
+if [ $VALUE="YES" ]
+then
+echo "Make some dinner";
+else
+echo "Continue working"
+fi
