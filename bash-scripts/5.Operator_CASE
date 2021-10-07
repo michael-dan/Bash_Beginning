@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#сase variable in
+#    condition)
+#        command 1;;
+#        command 2;;
+#esac
+
+
+echo "Enter model of the phone"
+read brand
+case $brand in
+    samsung)
+        echo "Discount for $brand - 30%";;
+    nokia)
+        echo "Discount for $brand - 10%";;
+    huawei)
+        echo "Discount for $brand - 20%";;
+    *)
+        echo "Unfortunately there's no discount for this item";;
+esac
