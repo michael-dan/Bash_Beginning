@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Enter Your age"
+read age
+if [[ $age -ge 0 ]] && [[ $age -lt 12 ]]; then
+        echo "Since you're $age years old, you are a child"
+    elif [[ $age -ge 12 ]] && [[ $age -lt 18 ]]; then
+        echo "Since you're $age years old, you are a teenager"
+    elif [[ $age -ge 18 ]] && [[ $age -lt 60 ]]; then
+        echo "Since you're $age years old, you are"
+    else echo "Oh man, you're $age, looks like you are an old chap"
+    fi
