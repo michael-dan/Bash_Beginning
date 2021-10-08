@@ -1,0 +1,60 @@
+#!/bin/bash
+
+#echo "Enter model of the phone"
+#read brand
+#if [[ $brand == "samsung" ]] || [[ $brand == "nokia" ]] || [[ $brand == "huawei" ]] || [[ $brand == "iphone" ]]; then
+#    case $brand in
+#        samsung)
+#            echo "Discount for $brand - 30%";;
+#        nokia)
+#            echo "Discount for $brand - 10%";;
+#        huawei)
+#            echo "Discount for $brand - 20%";;
+#        *)
+#            echo "Unfortunately there's no discount for this item"
+#    esac
+#else
+#    echo "$brand - is not a phone model"
+#fi
+
+
+
+#how to do it using if-elif
+
+#echo "Enter model of the phone"
+#read brand
+#if [[ $brand == "samsung" ]] || [[ $brand == "nokia" ]] || [[ $brand == "huawei" ]] || [[ $brand == "iphone" ]]; then
+#    if [[ $brand == "samsung" ]]; then
+#        echo "Discount for $brand - 30%"
+#    elif [[ $brand == "nokia" ]]; then
+#        echo "Discount for $brand - 10%"
+#    elif [[ $brand == "huawei" ]]; then
+#        echo "Discount for $brand - 20%"
+#    else
+#        echo "Unfortunately there's no discount for this item"
+#    fi
+#else
+#    echo "$brand - is not a phone"
+#fi
+
+
+
+#how to do it using case
+
+echo "Enter your phone's model"
+read brand
+case $brand in
+    samsung | nokia | huawei | iphone)
+        case $brand in
+            samsung) echo "Discount for $brand - 30%";;
+            nokia) echo "Discount for $brand - 10%";;
+            huawei) echo "Discount for $brand - 20%";;
+            *) echo "Unfortunately there's no discount for this item";;
+            #esac is not working here
+    *) echo "$brand is not a phone";;
+esac
+esac
+
+#error in line 54 - since esac doesn't work, script does not react to line 54, once the value of $brand is not samsung/nokia/huawei/iphone - script simply ignores it and does not execute line 54. But somehow it requires 2 "esac" in the end, otherwise it gives syntax error.
+ 
+
