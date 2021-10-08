@@ -1,0 +1,48 @@
+#!/bin/bash
+
+#create Array
+Array=(2 34 565 8)
+Array2=(34 3 five)
+
+echo "show all elements in Array:"
+echo ${Array[@]}
+echo ${Array2[@]}
+
+echo -en '\n'
+
+echo "show indexes in Array:"
+echo ${!Array[@]}
+echo ${!Array2[@]}
+
+echo -en '\n'
+
+echo "show certain index in Array:"
+echo ${Array[2]}
+echo ${Array2[0]}
+
+echo -en '\n'
+
+echo "show length of the Array"
+echo ${#Array[@]}
+echo ${#Array2[@]}
+
+echo -en '\n'
+
+echo "show legnth of a certain element in the Array"
+echo ${#Array[1]}
+echo ${#Array2[2]}
+
+echo -en '\n'
+
+echo "set value to a certain element in the Array"
+Array[3]=four
+Array2[2]=5
+echo ${Array[@]}
+echo ${Array2[@]}
+
+echo -en '\n'
+
+echo "show all elements in the Array using for"
+for i in ${!Array[@]}; do
+    echo "${Array[$i]}"
+done
