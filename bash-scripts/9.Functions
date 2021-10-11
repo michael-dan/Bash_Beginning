@@ -1,0 +1,10 @@
+#!/bin/bash
+
+list_files () {
+    echo "Show the catalog"
+    #At this point in terminal it says 'no such file or directory', but still it lists the files
+    #Why it is so?
+    cd ~/bash-scripts
+    ls;
+}
+list_files
