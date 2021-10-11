@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#Recursion is a function that calls itself
+
+Example () {
+    echo "How much is 2+2?"
+    read answer
+    if [[ $answer == 4 ]]; then
+        echo "Correct!"
+    else
+        echo "Incorrect. Please Try again."
+        echo 
+        Example
+    fi
+}
+echo "Example of Recursive function:"
+Example
